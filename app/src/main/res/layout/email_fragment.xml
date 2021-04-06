@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_background">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_to_name_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconSize="@dimen/button_icon_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/ic_baseline_chevron_left_24"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/and_your_email_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_content_left"
+        android:layout_marginLeft="@dimen/margin_content_left"
+        android:layout_marginTop="@dimen/margin_top_title_to_parent"
+        android:text="@string/and_your_email"
+        android:textSize="@dimen/large_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/email_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_content_left"
+        android:layout_marginLeft="@dimen/margin_content_left"
+        android:layout_marginTop="@dimen/margin_top_subtitles"
+        android:text="@string/email"
+        android:textSize="@dimen/mid_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/and_your_email_text_view" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_address_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:layout_marginTop="@dimen/margin_top_edit_text_to_text_view"
+        android:layout_marginEnd="@dimen/margin_content_left"
+        android:layout_marginStart="@dimen/margin_content_left"
+        android:textAppearance="?textAppearanceHeadline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_text_view"
+        android:singleLine="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/go_to_password_fragment_button"
+        android:layout_width="@dimen/circle_button_width"
+        android:layout_height="@dimen/circle_button_height"
+        android:layout_marginTop="@dimen/circle_button_top_margin"
+        android:layout_marginEnd="@dimen/circle_button_right_margin"
+        android:enabled="false"
+        app:icon="@drawable/ic_baseline_chevron_right_24"
+        app:iconGravity="textEnd"
+        app:iconSize="@dimen/button_icon_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_edit_text"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/circle_button_stroke_width" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

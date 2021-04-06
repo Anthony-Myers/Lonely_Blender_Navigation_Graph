@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_font_size">35sp</dimen>
+    <dimen name="mid_font_size">25sp</dimen>
+    <dimen name="blender_logo_margin_top">120dp</dimen>
+    <dimen name="margin_left">40dp</dimen>
+    <dimen name="app_title_margin_top">30dp</dimen>
+    <dimen name="create_account_button_corner">30dp</dimen>
+    <dimen name="create_account_button_stroke_width">3dp</dimen>
+    <dimen name="create_account_button_margin_top">10dp</dimen>
+    <dimen name="create_account_button_width">0dp</dimen>
+    <dimen name="margin_content_left">24dp</dimen>
+    <dimen name="margin_top_title_to_parent">90dp</dimen>
+    <dimen name="text_height">50dp</dimen>
+    <dimen name="edit_text_width">300dp</dimen>
+    <dimen name="margin_top_edit_text_to_text_view">16dp</dimen>
+    <dimen name="margin_top_subtitles">30dp</dimen>
+
+    <!-- FAB dimensions -->
+    <dimen name="circle_button_width">70dp</dimen>
+    <dimen name="circle_button_height">80dp</dimen>
+    <dimen name="circle_button_left_margin">250dp</dimen>
+    <dimen name="circle_button_top_margin">24dp</dimen>
+    <dimen name="circle_button_right_margin">28dp</dimen>
+    <dimen name="circle_button_stroke_width">2dp</dimen>
+    <dimen name="button_icon_size">70dp</dimen>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/destination_welcome_fragment"
+    >
+
+    <fragment
+        android:id="@+id/destination_welcome_fragment"
+        android:name="com.example.ui.WelcomeFragment"
+        tools:layout="@layout/welcome_fragment">
+        <action
+            android:id="@+id/action_welcome_fragment_to_name_fragment"
+            app:destination="@+id/destination_name_fragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_name_fragment"
+        android:name="com.example.ui.NameFragment"
+        tools:layout="@layout/name_fragment">
+        <action
+            android:id="@+id/action_name_fragment_to_email_fragment"
+            app:destination="@+id/destination_email_fragment">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string"/>
+            <argument
+                android:name="surname"
+                android:defaultValue=""
+                app:argType="string"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_email_fragment"
+        android:name="com.example.ui.EmailFragment"
+        tools:layout="@layout/email_fragment">
+
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string"/>
+        <argument
+            android:name="surname"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_email_fragment_to_password_fragment"
+            app:destination="@+id/destination_password_fragment">
+
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string"/>
+
+            <argument
+                android:name="surname"
+                android:defaultValue=""
+                app:argType="string"/>
+
+            <argument
+                android:name="email"
+                android:defaultValue=""
+                app:argType="string"/>
+
+        </action>
+        <action
+            android:id="@+id/action_email_fragment_pop"
+            app:popUpTo="@+id/destination_name_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_password_fragment"
+        android:name="com.example.ui.PasswordFragment"
+        tools:layout="@layout/password_fragment">
+
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <argument
+            android:name="surname"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_password_fragment_to_congratulations_fragment"
+            app:destination="@+id/destination_congratulations_fragment">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string"/>
+
+            <argument
+                android:name="surname"
+                android:defaultValue=""
+                app:argType="string"/>
+
+            <argument
+                android:name="email"
+                android:defaultValue=""
+                app:argType="string"/>
+
+            <argument
+                android:name="password"
+                android:defaultValue=""
+                app:argType="string"/>
+
+        </action>
+
+        <action
+            android:id="@+id/action_password_fragment_pop"
+            app:popUpTo="@+id/destination_email_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_congratulations_fragment"
+        android:name="com.example.ui.CongratulationsFragment"
+        tools:layout="@layout/congratulations_fragment">
+
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <argument
+            android:name="surname"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <argument
+            android:name="password"
+            android:defaultValue=""
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_congratulations_fragment_pop"
+            app:popUpTo="@+id/destination_welcome_fragment"/>
+
+    </fragment>
+
+</navigation>
